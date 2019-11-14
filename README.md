@@ -40,6 +40,9 @@ When our engineers receive your final result, we'll be looking at the following 
 Typically we expect it to compile and run on a Mac environment with Java 8. If your set up is any different, do let us know!
 When you are done share the result via GitHub.
 
+## Technologies Used Document
+You can find Technologies used document at src/docs/Technolgies used.rtf
+
 ## How to use git ##
 
 To use git to get repository contents run the following git command:
