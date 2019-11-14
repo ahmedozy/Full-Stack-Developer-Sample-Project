@@ -12,5 +12,5 @@ import com.k15t.pat.model.Participator;
  *
  */
 public interface ParticipatorRepository extends JpaRepository<Participator, Integer> {
-
+Participator findParticipatorByEmail(String email);
 }

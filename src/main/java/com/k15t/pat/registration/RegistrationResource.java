@@ -15,7 +15,7 @@ import javax.ws.rs.core.Response;
 public class RegistrationResource {
 
 	@Autowired
-	ParticipatorRepository participatorRepo;
+	private ParticipatorRepository participatorRepo;
     // Extend the current resource to receive and store the data in memory.
     // Return a success information to the user including the entered information.
     // In case of the address split the information into a better format/structure

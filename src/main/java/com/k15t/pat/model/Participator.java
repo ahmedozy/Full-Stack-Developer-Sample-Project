@@ -8,7 +8,7 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.validation.constraints.Email;
 
 /**
  * @author a.wahbi
@@ -19,6 +19,7 @@ public class Participator {
 	@Id
 	@GeneratedValue
 	private int id;
+	
 	@Column
 	private String name;
 	@Column
@@ -26,6 +27,7 @@ public class Participator {
 	private String password2;
 	@Embedded
 	private Address address;
+	@Email
 	@Column
 	private String email;
 	
