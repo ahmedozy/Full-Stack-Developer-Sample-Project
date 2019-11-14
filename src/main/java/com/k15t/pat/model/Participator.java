@@ -3,16 +3,30 @@
  */
 package com.k15t.pat.model;
 
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 /**
  * @author a.wahbi
  *
  */
+@Entity(name="PARTICIPATOR")
 public class Participator {
+	@Id
+	@GeneratedValue
 	private int id;
+	@Column
 	private String name;
+	@Column
 	private String password;
 	private String password2;
+	@Embedded
 	private Address address;
+	@Column
 	private String email;
 	
 	
