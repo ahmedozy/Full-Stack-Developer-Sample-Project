@@ -68,6 +68,34 @@
 				<div id="email-error" class="invalid-feedback"></div>
 			</div>
 			
+			<label class="form-text">Address:</label>
+			<div class="input-group mb-3">
+						<label class="form-text">Country:</label>
+				<div class="input-group-prepend">
+					<span class="input-group-text"> </span>
+				</div>
+				<input class="form-control  text-dark"
+					placeholder="enter your country" name="country" id="country" type="text" th:field="*{address.country}"
+					onChange="onCountryChange" />
+				<div id="country-error" class="invalid-feedback"></div>
+				<label class="form-text">City:</label>
+				<div class="input-group-prepend">
+					<span class="input-group-text"> </span>
+				</div>
+				<input class="form-control  text-dark"
+					placeholder="enter your city" name="city" id="city" type="text" th:field="*{address.city}"
+					onChange="onCityChange" />
+				<div id="city-error" class="invalid-feedback"></div>
+				<label class="form-text">Zip Code:</label>
+				<div class="input-group-prepend">
+					<span class="input-group-text"> </span>
+				</div>
+				<input class="form-control  text-dark"
+					placeholder="enter your zip code" name="zipCode" id="zipCode" type="text" th:field="*{address.zipCode}"
+					onChange="onZipCodeChange" />
+				<div id="zipCode-error" class="invalid-feedback"></div>
+			</div>
+			
 			<p>
 	 <input type="submit" class="btn btn-large btn-success" value="Sign up"/> <input type="reset" value="cancel"/>
 			</p>
@@ -77,6 +105,6 @@
 	</div>
 </body>
 <footer>
-	<div class="fixed-bottom" th:replace="common/footer :: footer"></div>
+	<div th:replace="common/footer :: footer"></div>
 </footer>
 </html>
