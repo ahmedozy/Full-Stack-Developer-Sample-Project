@@ -1,0 +1,98 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/layout" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Java meeting registration</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<!-- https://fonts.google.com/specimen/Roboto -->
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<!-- https://fontawesome.com/ -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- https://getbootstrap.com/ -->
+<link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+<body>
+	<div th:replace="common/header :: header">
+		<!-- ============================================================================ -->
+		<!-- This content is only used for static prototyping purposes (natural templates)-->
+		<!-- and is therefore entirely optional, as this markup fragment will be included -->
+		<!-- from "fragments/header.html" at runtime.                                     -->
+		<!-- ============================================================================ -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Static header</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="hero-unit">
+			<h1></h1>
+			<p>Welcome to the Spring MVC Quickstart application! Get started
+				quickly by signing up.</p>
+
+
+			<label class="form-text">Name:</label>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> </span>
+				</div>
+				<input class="form-control  text-dark"
+					placeholder="enter your name" name="name" id="name" type="text"
+					onChange="onNameChange" />
+				<div id="name-error" class="invalid-feedback"></div>
+			</div>
+			<label class="form-text">Password:</label>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> </span>
+				</div>
+				<input class="form-control  text-dark"
+					placeholder="enter your password" name="password" id="password"
+					type="password" onChange="onPasswordChange" />
+				<div id="password-error" class="invalid-feedback"></div>
+			</div>
+			<label class="form-text">Confirm password:</label>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> </span>
+				</div>
+				<input class="form-control  text-dark"
+					placeholder="confirm your password" name="password2" id="password2"
+					type="password" onChange="onPassword2Change" />
+				<div id="password2-error" class="invalid-feedback"></div>
+			</div>
+			<label class="form-text">Email:</label>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> </span>
+				</div>
+				<input class="form-control  text-dark"
+					placeholder="enter your email" name="email" id="email" type="text"
+					onChange="onEmailChange" />
+				<div id="email-error" class="invalid-feedback"></div>
+			</div>
+			
+			<p>
+				<a href="/signup" th:href="@{/signup}"
+					class="btn btn-large btn-success">Sign up</a>
+			</p>
+
+
+		</div>
+	</div>
+</body>
+<footer>
+	<div class="fixed-bottom" th:replace="common/footer :: footer"></div>
+</footer>
+</html>
